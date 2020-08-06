@@ -1,3 +1,9 @@
+// Color variables
+$PrimaryColor: #3E3758
+$SecondaryColor: #7B88F2
+$backgroundWhite: #FFFFFC
+$SecondaryWhite: #f6eedf
+    
 *
     padding: 0
     margin: 0
@@ -7,7 +13,7 @@
     left: 0
     width: 90px
     height: 100vh
-    background-color: black
+    background-color: $PrimaryColor
 
 .chat-menu
     position: fixed
@@ -26,6 +32,18 @@
     background-color: black
     @media screen and ( max-width: 1000px )
         left: 290px
+
+.material-icons 
+    font-size: 40px
+    width: 100%
+    padding: 10px 20px
+    margin: 10px 0
+    color: white
+    &:hover
+        background-color: $SecondaryColor
+        cursor: pointer
+.menu-icon
+
         
         
 
