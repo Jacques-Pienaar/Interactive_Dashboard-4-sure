@@ -15,7 +15,7 @@
 
 #side-nav ul li {
   list-style: none;
-  padding: 20px 2px 0 2px;
+  padding: 25px 2px 0 2px;
 }
 
 #side-nav .nav-item {
@@ -25,5 +25,19 @@
 
 #side-nav .bottom-item {
   float: bottom;
+}
+
+.container .col-chats {
+  top: 0;
+  left: 60;
+  width: 35%;
+  height: 100vh;
+}
+
+.container .col-messages {
+  top: 0;
+  right: 0;
+  width: auto;
+  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */
