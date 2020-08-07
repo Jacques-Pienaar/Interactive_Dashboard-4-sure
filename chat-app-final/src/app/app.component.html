@@ -5,11 +5,4 @@
   <i class="material-icons">delete</i>
   <i class="material-icons">group</i>
 </div>
-<div class="chat-menu">
-  <h1>Messages</h1>
-  <div class="chat-search"></div>
-  <div *ngFor="let user of userData.users">
-    <app-chat-preview user="{{ user }}"></app-chat-preview>
-  </div>
-</div>
-<div class="chat"></div>
+<app-contact-preview></app-contact-preview>

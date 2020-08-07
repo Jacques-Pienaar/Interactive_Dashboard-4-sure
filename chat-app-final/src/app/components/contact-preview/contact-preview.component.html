@@ -1,0 +1,66 @@
+<div class="main">
+  <div class="contact-view">
+    <h2>Messages</h2>
+    <input placeholder="Search..." type="text" />
+    <ul class="chats">
+      <div class="contact-timestamp"></div>
+      <div
+        class="li"
+        *ngFor="let user of userData.users"
+        (click)="onSelect(user)"
+      >
+        <div class="chat-item">
+          <img src="{{ user.avatar }}" alt="" />
+          <div class="contact-info">
+            <h2>{{ user.username }}</h2>
+            <p>{{ user.status }}</p>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </div>
+
+  <div class="chat-box">
+    <div *ngIf="selectedMessages">
+      <div class="chat-header">
+        <div class="container">
+          <div class="col chat-profile">
+            <img src="{{ user.avatar }}" alt="" />
+          </div>
+          <div class="col contact-info">
+            <h2>{{ selectedUser.username }}</h2>
+            <p>{{ selectedUser.status }}</p>
+          </div>
+          <div class="col icon">
+            <i class="material-icons">call</i>
+            <i class="material-icons">more-vert</i>
+          </div>
+        </div>
+      </div>
+      <div class="chat-messages">
+        <div *ngFor="let message of selectedMessages.messages">
+          <div
+            *ngIf="message.user_id != selectedUser.user_id; else incomming_msg"
+          >
+            <p class="incomming">{{ message.message }}</p>
+          </div>
+          <ng-template #incomming_msg>
+            <p class="outgoing">{{ message.message }}</p></ng-template
+          >
+        </div>
+      </div>
+    </div>
+    <div class="chat-input">
+      <div class="chat-input">
+        <div class="col icons">
+          <i class="material-icons">sentiment_satisfied</i>
+          <i class="material-icons">insert_photo</i>
+        </div>
+        <div class="col inputs">
+          <input placeholder="Type a message..." type="text" />
+          <i class="material-icons">send</i>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
